@@ -1,20 +1,20 @@
 #include <iostream>
 using namespace std;
 
-// Recursive function to calculate factorial
-int factorial(int n) {
-    if (n == 0 || n == 1)   // base case
+// Recursive function to calculate power (x^n)
+int power(int base, int exp) {
+    if (exp == 0)   // base case
         return 1;
     else
-        return n * factorial(n - 1);  // recursive call
+        return base * power(base, exp - 1);  // recursive call
 }
 
 int main() {
-    int num;
-    cout << "Enter a number: ";
-    cin >> num;
+    int base, exp;
+    cout << "Enter base and exponent: ";
+    cin >> base >> exp;
 
-    cout << "Factorial of " << num << " = " << factorial(num) << endl;
+    cout << base << "^" << exp << " = " << power(base, exp) << endl;
 
     return 0;
 }
