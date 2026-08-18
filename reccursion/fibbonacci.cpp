@@ -1,7 +1,6 @@
 #include <iostream>
 using namespace std;
-
-// Recursive function to calculate nth Fibonacci number
+//reccursion
 int fibonacci(int n) {
     if (n == 0)   
         return 0;
